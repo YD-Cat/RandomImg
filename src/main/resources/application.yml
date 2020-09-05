@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+# 图片路径
+img:
+  path: /root/RandomImg/images/     #Linux
+#  path: F:\img\      #Win
