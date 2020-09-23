@@ -28,14 +28,19 @@ public class ImgController {
         File file = new File(path);
         File[] files = file.listFiles();
         // 通过转发访问本地图片
-        if (files.length > 0) {
+        try{
+            if (files.length > 0) {
             Random r = new Random();
             int i = r.nextInt(files.length);
-            String name = files[i].getName();
-            url = "img/" + name;
-            return "forward:" + url;
-        } else {
-            // 没有配置本地图片，重定向到第三方
+                String name = files[i].getName();
+                url = "img/" + name;
+                return "forward:" + url;
+            } else {
+                // 没有配置本地图片，重定向到第三方
+                return "redirect:" + url;
+            }
+        }catch (Exception e){
+            // 异常，重定向到第三方
             return "redirect:" + url;
         }
     }
