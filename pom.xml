@@ -6,7 +6,7 @@
 
     <groupId>cn.YD-Cat</groupId>
     <artifactId>RandomImg</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
