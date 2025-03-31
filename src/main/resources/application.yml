@@ -2,12 +2,9 @@ server:
   port: 8081
 # 图片路径
 img:
-  path: /root/RandomImg/     #Linux
-#  path: F:\RandomImg     #Win
-
-spring:
-  resources:     #访问系统外部资源，将该目录下的文件映射到系统下
-    static-locations: file:${img.path} #本地文件
-  mvc:
-    static-path-pattern: /static/**
-
+  # Linux
+  linuxPath: /root/docker/RandomImg/
+  # Win
+  winPath: D:\RandomImg\
+  # url
+  url: https://api.horosama.com/random.php
