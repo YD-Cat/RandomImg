@@ -7,6 +7,7 @@ import cn.ydcat.img.config.ImgConfig;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -17,6 +18,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.Random;
 
+@Slf4j
 @Controller
 public class IndexController {
 
@@ -49,7 +51,7 @@ public class IndexController {
                 throw new RuntimeException("没有图片文件");
             }
         }catch (Exception e){
-            e.printStackTrace();
+            log.error("异常：{}，文件路径：{}", e.getMessage(), imgPath, e);
 //            try {
 //                // 异常，重定向到第三方
 //                url = imgConfig.getApiUrl();

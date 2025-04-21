@@ -3,11 +3,11 @@ server:
 # 图片路径
 img:
   # Linux
-  linuxPath: /root/docker/RandomImg/images
+  linuxPath: ${IMG_LINUX PATH:/opt/RandomImg/images}
   # Win
-  winPath: D:\RandomImg\images
+  winPath: ${IMG_WIN PATH:D:\RandomImg\images}
   # url
-  apiUrl: https://api.horosama.com/random.php
+  apiUrl: ${IMG_API_URL:https://api.horosama.com/random.php}
 
 
 spring:
